@@ -5,8 +5,6 @@
   // mapa de histórias -> { src: caminhoDoScript, starter: nomeDaFuncaoDeInicio }
   const HISTORY_MAP = {
     "floresta": { src: "assets/jogos/floresta.js", starter: "iniciarJogoFloresta" },
-    "castelo": { src: "assets/jogos/castelo.js", starter: "iniciarJogoCastelo" },
-    "espaco":  { src: "assets/jogos/espaco.js",  starter: "iniciarJogoEspaco" }
   };
 
   // controla scripts já carregados
