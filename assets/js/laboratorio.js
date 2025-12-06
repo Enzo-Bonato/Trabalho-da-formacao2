@@ -1,7 +1,3 @@
-// ---------------------------
-// SISTEMA DE VOTOS
-// ---------------------------
-
 // Se não existir nada no localStorage, cria o objeto inicial:
 if (!localStorage.getItem("votosIdeias")) {
   localStorage.setItem("votosIdeias", JSON.stringify({

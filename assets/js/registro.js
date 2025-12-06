@@ -1,11 +1,8 @@
 // registro.js
-
-// Helper: retorna array de usuários do localStorage (ou [] se nada)
 function getUsers() {
   return JSON.parse(localStorage.getItem('usuarios') || '[]');
 }
 
-// Helper: salva a lista de usuários no localStorage
 function saveUsers(users) {
   localStorage.setItem('usuarios', JSON.stringify(users));
 }
@@ -63,8 +60,7 @@ document.getElementById('registerForm').addEventListener('submit', function (e) 
     msg.textContent = 'Este e-mail já está cadastrado.';
     return;
   }
-
-  // Criação do usuário completo
+  
   const newUser = {
     id: Date.now(),
     nome,
