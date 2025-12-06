@@ -72,7 +72,7 @@ if (btnSalvar) {
     const novoEmail = (elEmail.value || '').trim().toLowerCase();
     const novaSenha = elSenha.value || '';
 
-    if (novoNome.length < 2) {
+    if (novoNome.length < 4|| !/^[A-Za-zÀ-ÖØ-öø-ÿ' -]+$/.test(novoNome.trim())) {
       if (msg) { msg.style.color = 'crimson'; msg.textContent = 'O nome deve ser válido.'; }
       return;
     }

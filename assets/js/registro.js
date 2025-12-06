@@ -24,11 +24,12 @@ document.getElementById('registerForm').addEventListener('submit', function (e) 
   const msg = document.getElementById('registerMessage');
 
   // Validação do nome
-  if (nome.length < 2) {
+  if (nome.length < 4 || !/^[A-Za-zÀ-ÖØ-öø-ÿ' -]+$/.test(nome.trim())) {
     msg.style.color = 'crimson';
     msg.textContent = 'Digite um nome válido.';
     return;
   }
+
 
   // Validação do e-mail
   if (!isValidEmail(email)) {
