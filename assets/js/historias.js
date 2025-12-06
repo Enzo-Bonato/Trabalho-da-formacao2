@@ -1,6 +1,3 @@
-// assets/js/historias.js
-// Loader robusto para carregar jogos dinamicamente dentro do #gameContainer
-
 (function () {
   // mapa de histórias -> { src: caminhoDoScript, starter: nomeDaFuncaoDeInicio }
   const HISTORY_MAP = {
@@ -13,7 +10,7 @@
   function log(...args) { console.log("[historias.js]", ...args); }
   function error(...args) { console.error("[historias.js]", ...args); }
 
-  // limpa área do jogo (remover placeholder)
+  // limpa área do jogo
   function limparGameContainer() {
     const container = document.getElementById("gameContainer");
     if (!container) {
@@ -21,7 +18,6 @@
       return null;
     }
     container.innerHTML = "";
-    // opcional: manter classe para estilo
     container.classList.remove("vazio");
     container.classList.add("cheio");
     return container;
